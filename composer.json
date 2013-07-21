@@ -1,6 +1,7 @@
 {
     "require": {
         "silex/silex": "~1.0",
-	"twig/twig": "1.*"
+		"symfony/twig-bridge": "~2.2",
+		"symfony/class-loader": "~2.2"
     }
 }
