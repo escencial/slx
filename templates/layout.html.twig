@@ -14,23 +14,60 @@
 
     <meta name="viewport" content="width=device-width">
 
+    <link rel="stylesheet" href="{{ app.request.basepath }}/assets/css/styles.css">
+
+    <script src="{{ app.request.basepath }}/assets/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li>uno</li>
-                        <li>dos</li>
-                        <li>tres</li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
-        </div>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <a class="brand" href="/">{{ title }}</a>
+ 
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+
+        <ul class="nav">
+            <li class="{{ home_active }}"><a href="/">Home</a></li>
+            <li class="{{ link1_active }}"><a href="/link1">Link1</a></li>
+            <li class="{{ link2_active }}"><a href="/link2">Link2</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <ul class="nav pull-right">
+            <form class="navbar-search pull-left" action="">
+              <input type="text" class="search-query span2" placeholder="Search" data-provide="typeahead">
+            </form>
+        </ul>
+      </div>
     </div>
+  </div>
+</div>
 
     <div class="container">
         <div id="main" role="main" class="container">
@@ -41,5 +78,6 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{ app.request.basepath }}/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+        <script src="{{ app.request.basepath }}/assets/js/scripts.js"></script>
 </body>
 </html>

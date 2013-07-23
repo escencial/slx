@@ -1,6 +1,20 @@
 {
+	"name"        : "Slx",
+    "type"        : "library",
+    "description" : "A Silex Edition. This project is a base for your silex applications.",
+    "keywords"    : ["framework"],
+    "homepage"    : "http://github.com/escencial/slx",
+    "license"     : "MIT",
+    "authors"     : [
+        {
+            "name"  : "escencial",
+            "email" : "escencial@gmail.com"
+        }
+    ],
     "require": {
         "silex/silex": "~1.0",
-		"symfony/twig-bridge": "~2.2"
+		"symfony/twig-bridge": "~2.2",
+		"kriswallsmith/assetic" : "~1.0.0",
+		"twitter/bootstrap"     : "2.3.1"
     }
 }
