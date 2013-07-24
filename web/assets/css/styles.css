@@ -5188,3 +5188,8 @@ a.badge:focus {
 body {
   padding-top: 60px;
 }
+footer{
+  color: #2f96b4;
+  background-color: #164F74;
+  padding: 17px 0 18px 0;
+}

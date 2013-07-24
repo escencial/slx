@@ -6,9 +6,10 @@ use SilexAssetic\AsseticServiceProvider;
 
 $app = new Application();
 
+// @todo get twig data from config.
 $app->register(new TwigServiceProvider(), array(
-    'twig.path'    => array(__DIR__.'/../templates'),
-    'twig.options' => array('cache' => __DIR__.'/../cache'),
+    'twig.path'    => __DIR__ . '/../templates',
+    'twig.options' => array('cache' => __DIR__ . '/../cache/twig'),
 ));
 
 $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
