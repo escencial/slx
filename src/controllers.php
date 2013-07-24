@@ -27,11 +27,3 @@ $app->get('/link2', function() use ($app)
 	return $app['twig']->render('link2.html.twig', $data);
 });
 
-/**
- * var_dump
- */
-$app->get('/cc', function() use ($app) 
-{
-	$rtn = $app['twig']->clearCacheFiles();
-	return var_dump($app['twig']);
-});
